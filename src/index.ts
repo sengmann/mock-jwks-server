@@ -10,7 +10,7 @@ process.on("SIGINT", () => {
 const keypair = createKeyPair();
 const JWKS = createJWKS({
   ...keypair,
-  jwksOrigin: config.get("jwksBase"),
+  jwksOrigin: config.get("jwksOrigin"),
 });
 
 const kid = () => JWKS.keys[0].kid;

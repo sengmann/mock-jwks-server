@@ -10,6 +10,7 @@
     "build:docker:win-x64": "bun build --compile src/index.ts --target=bun-windows-x64-modern --minify --sourcemap --outfile dist/win-x64/mock-jwks-server",
     "build:docker:mac-arm64": "bun build --compile src/index.ts --target=bun-darwin-arm64 --minify --sourcemap --outfile dist/mac-arm64/mock-jwks-server",
     "build:docker:mac-x64": "bun build --compile src/index.ts --target=bun-darwin-x64 --minify --sourcemap --outfile dist/mac-x64/mock-jwks-server",
+    "start": "bun run src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -2,6 +2,11 @@ import { createJWKS, createKeyPair, signJwt } from "./tools";
 import { serve } from "bun";
 import { config } from "./config";
 
+process.on("SIGINT", () => {
+  console.log("Ctrl-C was pressed");
+  process.exit();
+});
+
 const keypair = createKeyPair();
 const JWKS = createJWKS({
   ...keypair,

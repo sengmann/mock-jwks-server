@@ -5,11 +5,11 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "concurrently npm:build:docker:linux-x64 npm:build:docker:linux-arm64 npm:build:docker:win-x64 npm:build:docker:mac-arm64 npm:build:docker:mac-x64",
-    "build:docker:linux-x64": "bun build --compile src/index.ts --target=bun-linux-x64-modern --outfile dist/linux-x64/mock-jwks-server",
-    "build:docker:linux-arm64": "bun build --compile src/index.ts --target=bun-linux-arm64 --outfile dist/linux-arm64/mock-jwks-server",
-    "build:docker:win-x64": "bun build --compile src/index.ts --target=bun-windows-x64-modern --outfile dist/win-x64/mock-jwks-server",
-    "build:docker:mac-arm64": "bun build --compile src/index.ts --target=bun-darwin-arm64 --outfile dist/mac-arm64/mock-jwks-server",
-    "build:docker:mac-x64": "bun build --compile src/index.ts --target=bun-darwin-x64 --outfile dist/mac-x64/mock-jwks-server",
+    "build:docker:linux-x64": "bun build --compile src/index.ts --target=bun-linux-x64-modern --minify --sourcemap --outfile dist/linux-x64/mock-jwks-server",
+    "build:docker:linux-arm64": "bun build --compile src/index.ts --target=bun-linux-arm64 --minify --sourcemap --outfile dist/linux-arm64/mock-jwks-server",
+    "build:docker:win-x64": "bun build --compile src/index.ts --target=bun-windows-x64-modern --minify --sourcemap --outfile dist/win-x64/mock-jwks-server",
+    "build:docker:mac-arm64": "bun build --compile src/index.ts --target=bun-darwin-arm64 --minify --sourcemap --outfile dist/mac-arm64/mock-jwks-server",
+    "build:docker:mac-x64": "bun build --compile src/index.ts --target=bun-darwin-x64 --minify --sourcemap --outfile dist/mac-x64/mock-jwks-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

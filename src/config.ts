@@ -1,14 +1,11 @@
 import Convict from "convict";
-import convivtWithFormats from "convict-format-with-validator";
-
-Convict.addFormats(convivtWithFormats);
 
 export const config = Convict({
   jkuHeaderValue: {
     arg: "jkuHeaderValue",
     default: "https://localhost:3000/jwks",
     env: "JKU_HEADER_VALUE",
-    format: "url",
+    format: String,
   },
   jwksBase: {
     arg: "jwksBase",

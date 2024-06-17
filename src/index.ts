@@ -1,4 +1,3 @@
-import commandLineArgs from "command-line-args";
 import { createJWKS, createKeyPair, signJwt } from "./tools";
 import { serve } from "bun";
 import { config } from "./config";

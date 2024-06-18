@@ -7,6 +7,8 @@ process.on("SIGINT", () => {
   process.exit();
 });
 
+console.log("starting server with config ", config.validate().get());
+
 const keypair = createKeyPair();
 const JWKS = createJWKS({
   ...keypair,

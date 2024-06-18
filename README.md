@@ -19,7 +19,8 @@ docker run -p 3000:3000 sirion182/mock-jwks-server:tagname
 
 When started the server will serve the JWKS at the JWKS_PATH like `http://localhost:3000/.well-known/jwks.json`.
 
-To sign a token use the `/sign` endpoint. The endpoint expects a POST request with a JSON body containing the token. It will return a signed token.
+To sign a token use the `/sign` endpoint. The endpoint expects a POST request with a JSON body containing the token. It
+will return a signed token.
 
 ```bash
 curl -X POST \
@@ -30,8 +31,8 @@ curl -X POST \
 
 ## Configuration
 
-| name           | default                       | arg            | env              | format  | nullable | sensitive | doc                                                                                                           |
-| -------------- | ----------------------------- | -------------- | ---------------- | ------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------- |
-| jkuHeaderValue | "https://localhost:3000/jwks" | jkuHeaderValue | JKU_HEADER_VALUE | String  | false    | false     | If defined the value for the JKU header will be set to this value. If not defined the header will not be set. |
-| jwksOrigin     | undefined                     | jwksOrigin     | JWKS_BASE        | String  | false    | false     | The origin for the certificate                                                                                |
-| jwksPath       | "/.well-known/jwks.json"      | jwksPath       | JWKS_PATH        | unknown | false    | false     | The path to the JWKS endpoint                                                                                 |
+| name           | env              | arg            | doc                                                                                                           | nullab  | default                       |
+|----------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------|---------|-------------------------------|
+| jkuHeaderValue | JKU_HEADER_VALUE | jkuHeaderValue | If defined the value for the JKU header will be set to this value. If not defined the header will not be set. | unknown | "https://localhost:3000/jwks" |
+| jwksOrigin     | JWKS_BASE        | jwksOrigin     | The origin for the certificate                                                                                | unknown | null                          |
+| jwksPath       | JWKS_PATH        | jwksPath       | The path to the JWKS endpoint                                                                                 | unknown | "/.well-known/jwks.json"      |

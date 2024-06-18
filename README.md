@@ -31,8 +31,8 @@ curl -X POST \
 
 ## Configuration
 
-| name           | env              | arg            | doc                                                                                                           | nullab  | default                       |
-|----------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------|---------|-------------------------------|
-| jkuHeaderValue | JKU_HEADER_VALUE | jkuHeaderValue | If defined the value for the JKU header will be set to this value. If not defined the header will not be set. | unknown | "https://localhost:3000/jwks" |
-| jwksOrigin     | JWKS_BASE        | jwksOrigin     | The origin for the certificate                                                                                | unknown | null                          |
-| jwksPath       | JWKS_PATH        | jwksPath       | The path to the JWKS endpoint                                                                                 | unknown | "/.well-known/jwks.json"      |
+| name           | env              | arg            | doc                                                                                                           | nullable | default                       |
+|----------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------|----------|-------------------------------|
+| jwksPath       | JWKS_PATH        | jwksPath       | The path to the JWKS endpoint                                                                                 | false    | "/.well-known/jwks.json"      |
+| jkuHeaderValue | JKU_HEADER_VALUE | jkuHeaderValue | If defined the value for the JKU header will be set to this value. If not defined the header will not be set. | true     | "https://localhost:3000/jwks" |
+| jwksOrigin     | JWKS_BASE        | jwksOrigin     | The origin for the certificate                                                                                | true     | null                          |
